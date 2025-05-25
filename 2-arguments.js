@@ -1,10 +1,11 @@
-const arguments = arguments.process.slice(2);
+const arguments = 3;
 
-if (arguments.length === 0) {
+if (arguments < 2) {
     console.log("No argument");
 }
-else if (arguments.length === 1) {
-    console.log("Best argument found");
+else if (arguments === 1) {
+    console.log("Best Argument found");
 }
-else {console.log("Best School Arguments found");
+else {
+    console.log("Best School Arguments found");
 }
