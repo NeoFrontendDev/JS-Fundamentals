@@ -1,19 +1,13 @@
-const printSquare = (size) => {
-    const numSize = parseInt(size);
-  
-    if (isNaN(numSize)) {
-      console.log("Missing size");
-      return;
+const size = parseInt(process.argv[2]);
+
+if (isNaN(size)) {
+  console.log('Missing size');
+} else {
+  for (let i = 0; i < size; i++) {
+    let row = '';
+    for (let j = 0; j < size; j++) {
+      row += 'x';
     }
-  
-    let i = 0;
-    while (i < numSize) {
-      console.log("x".repeat(numSize));
-      i++;
-    }
-  };
-  
-  const args = process.argv.slice(2);
-  const size = args[0];
-  
-  printSquare(size);
+    console.log(row);
+  }
+}
