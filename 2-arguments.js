@@ -1,9 +1,9 @@
-const arguments = 3;
+const args = process.argv.slice(2);
 
-if (arguments < 2) {
+if (args.length === 0) {
     console.log("No argument");
 }
-else if (arguments === 1) {
+else if (args.lenths === 1) {
     console.log("Best Argument found");
 }
 else {
