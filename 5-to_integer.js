@@ -1,9 +1,5 @@
-function argConverter(arg) {
-    if (isNaN(parseInt(arg))) {
-        console.log("Not a number");
-    } else {
-        console.log(parseInt(arg));
-    }
-}
+const arg = process.argv[2];
 
-argConverter(process.argv[2]);
+if (/^-?\d+$/.test(arg)) {
+    console.log("My number: " +  parseInt(arg));
+} else console.log("Not a number");
